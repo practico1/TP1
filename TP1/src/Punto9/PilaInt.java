@@ -26,12 +26,6 @@ public class PilaInt extends Pila{
 		      meter(aux);
 		      return aux;
 		   }
-		   public int getMaxPila(){
-		      return maxpila;
-		   }
-		   public void limpiarPila(){
-		      cima=-1;
-		   }
 		   public void mostrarPila(){
 		      PilaInt p2=new PilaInt();
 		      int aux=0;

@@ -14,5 +14,12 @@ public class Pila{
 	    public boolean estaLlena() {
 	        return (cima == maxpila-1);
 	    }
+	    
+	    public int getMaxPila(){
+		      return maxpila;
+		   }
+		   public void limpiarPila(){
+		      cima=-1;
+		   }
 	   
 }
