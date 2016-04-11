@@ -1,20 +1,19 @@
 package Punto10;
 
 public class Radio extends Programa{
-	private String P_musicalizacion;
+	Persona P_musicalizacion;
 	private int comerciales;
-	public Radio(String titulo, String p_responsable, String nom_Emisora, int codigo, int duracion, int h_inicio,
-			String nombre, String apellido, int dNI, String titulo2, String p_responsable2, String nom_Emisora2,
-			int codigo2, int duracion2, int h_inicio2, String p_musicalizacion, int comerciales) {
-		super(titulo, p_responsable, codigo, nombre, apellido, titulo2,
-				codigo2, duracion2, h_inicio2);
+	
+	public Radio(String titulo, String nom_Emisora, int codigo, int duracion, int h_inicio, Persona p_responsable,
+			Persona p_musicalizacion, int comerciales) {
+		super(titulo, nom_Emisora, codigo, duracion, h_inicio, p_responsable);
 		P_musicalizacion = p_musicalizacion;
 		this.comerciales = comerciales;
 	}
-	public String getP_musicalizacion() {
+	public Persona getP_musicalizacion() {
 		return P_musicalizacion;
 	}
-	public void setP_musicalizacion(String p_musicalizacion) {
+	public void setP_musicalizacion(Persona p_musicalizacion) {
 		P_musicalizacion = p_musicalizacion;
 	}
 	public int getComerciales() {
@@ -23,7 +22,10 @@ public class Radio extends Programa{
 	public void setComerciales(int comerciales) {
 		this.comerciales = comerciales;
 	}
-	
+
+	public String toString(){
+		return " Radio"+" /nResponsable de musicalizacion: "+getP_musicalizacion()+" /nPersona Responsable del programa: "+ getP_responsable()+" /nNombre de la emisora: "+getNom_Emisora()+" /nCodigo: "+getCodigo()+" /nDuracion del programa: "+getDuracion()+" /nHora de inicio: "+getH_inicio()+ " /nComerciales: "+getComerciales();
+	}
 	
 	
 }

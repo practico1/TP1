@@ -3,11 +3,10 @@ package Punto10;
 public class Television extends Programa {
 	private int c_tanda;
 
-	public Television(String titulo, String p_responsable, String nom_Emisora, int codigo, int duracion, int h_inicio,
-			String nombre, String apellido, int dNI, String titulo2, String p_responsable2, String nom_Emisora2,
-			int codigo2, int duracion2, int h_inicio2, int c_tanda) {
-		super(titulo, p_responsable, codigo, nombre, apellido, titulo2,
-				codigo2, duracion2, h_inicio2);
+	
+	public Television(String titulo, String nom_Emisora, int codigo, int duracion, int h_inicio, Persona p_responsable,
+			int c_tanda) {
+		super(titulo, nom_Emisora, codigo, duracion, h_inicio, p_responsable);
 		this.c_tanda = c_tanda;
 	}
 
@@ -19,6 +18,10 @@ public class Television extends Programa {
 		this.c_tanda = c_tanda;
 	}
 
+
+	public String toString(){ 
+		return "TELEVISION :"+" /nCantidad de Propagandas "+getC_tanda()+" /nPersona Responsable: "+getP_responsable()+"¨/nNombre de la emisora "+getNom_Emisora()+" /nCodigo: "+getCodigo()+"/nDuracion: "+getDuracion()+" /nHora de inicio: "+getH_inicio();
+	}
 	
 	
 	

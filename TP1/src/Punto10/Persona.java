@@ -28,6 +28,7 @@ public void setDNI(int dNI) {
 	DNI = dNI;
 }
 
-	
-	
+	public String toString(){
+	return "PERSONA"+ " /nNombre de la persona: "+getNombre()+" /nApellido: "+getApellido()+" /nDNI: "+getDNI();
+	}
 }
