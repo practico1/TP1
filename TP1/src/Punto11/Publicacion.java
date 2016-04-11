@@ -19,6 +19,9 @@ private String titulo,responsable,editor,mes,año;
 	public int getCodigo() {
 		return codigo;
 	}
+	public void aasdas(String a){
+		System.out.println();
+	}
 	public void setCodigo(int codigo) {
 		this.codigo = codigo;
 	}
@@ -65,6 +68,7 @@ private String titulo,responsable,editor,mes,año;
 		this.editor = editor;
 	}
 
+	
 	
 	
 }

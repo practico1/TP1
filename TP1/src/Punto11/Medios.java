@@ -1,26 +1,36 @@
 package Punto11;
 import java.util.Vector;
 
-import Punto10.Programa;
 public class Medios {
 int pTotal;
-
 Vector<Publicacion>publicaciones;
 
-public Medios(Vector<Publicacion> publicaciones) {
+public Medios() {
 	super();
-	this.publicaciones = publicaciones;
+	this.pTotal = 0;
+	publicaciones=new Vector <Publicacion>();
 }
 
 	public void agregarPublicacion(Publicacion p){
 		publicaciones.add(p);
 	}
-	public void quitarPublicaciones(int p){
-		publicaciones.remove(p);
+	public void quitarPublicaciones(int k){
+		publicaciones.removeElementAt(k);
 	}
-	public void mostrarProgramas(){
-		for(Publicacion p:publicaciones){
-			p.toString();
+	
+	public void mostrarPublicaciones(){
+		int j=0;
+		for(Publicacion i:publicaciones){
+			if(i instanceof Diarios){
+				System.out.print(j);
+				System.out.println((Diarios)i);
+			}
+			else
+				if(i instanceof Revistas){
+					System.out.print(j);
+				System.out.println((Revistas)i);
+				}	
+			j++;
 		}
 	}
 }
